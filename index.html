@@ -35,14 +35,32 @@
                     <h3>quote</h3>
                 </div>
             </div>
-            <div class="col-3">
-                <h3>ToDoList</h3>
+            <div class="col-3 d-flex flex-column align-items-center shadow">
+                <div class="row">
+                    <div class="col" id="tasks"></div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <p>Tasks:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <form onsubmit="app.tasksController.addTask(event)"
+                            class="d-flex  align-items-center justify-content-between">
+                            <input type="text" name="description" id="description" placeholder="Add task..." required
+                                minlength="3" maxlength="50">
+                            <button type="submit" class="btn btn-primary p-0">➕</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer class="bg-dark text-light">
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"
+        integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
