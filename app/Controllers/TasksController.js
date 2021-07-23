@@ -36,12 +36,20 @@ export default class TasksController {
     try {
       await tasksService.getMyTasks()
     } catch (error) {
-      console.log("couldn't get the tasklist:", error)
+      console.error("couldn't get the tasklist:", error)
     }
   }
 
-  toggle(id) {
-    tasksService.toggle(id)
+  async removeTask(id) {
+    try {
+      await tasksService.removeTask(id)
+    } catch (error) {
+      console.error("couldn't remove the task:", error)
+    }
+  }
+
+  async toggle(id) {
+    await tasksService.toggle(id)
   }
 
 }
