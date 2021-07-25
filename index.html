@@ -12,13 +12,31 @@
     <title>Inspire_chkpt4b</title>
 </head>
 
-<body>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body class="debug">
     <header>
         <div class="row">
             <div class="col"></div>
         </div>
     </header>
-    <main class="container-fluid bg-primary">
+    <main class="container-fluid bg-cream">
         <div class="row pt-4">
             <div class="col-md-3">
                 <p>empty column of 3</p>

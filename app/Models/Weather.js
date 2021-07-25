@@ -5,13 +5,21 @@ export default class Weather {
     this.tempK = data.main.temp;
     this.tempC = Math.floor(data.main.temp - 273.15);
     this.tempF = Math.floor((data.main.temp - 273.15) * 9 / 5 + 32);
+    this.clicked = data.clicked || false
   }
 
-  get Template() {
+  get TemplateFahr() {
     return `
-    <h3>Today's Weather:</h3>
-    <h4 class ="celsius">${this.tempC}°C</h4>
+    <h3 onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>Today's Weather:</h3>
     <h4 class ="fahr">${this.tempF}°F</h4>
+    
+    `
+  }
+
+  get TemplateCel() {
+    return `
+    <h3 onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>Today's Weather:</h3>
+    <h4 class ="celsius">${this.tempC}°C</h4>
     `
   }
 }

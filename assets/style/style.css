@@ -2,6 +2,7 @@ ul {
   list-style-type: none;
 }
 
+/* This is what he did in class, but it did not work. */
 /* .content {
   &:hover{
     .author {
@@ -13,3 +14,12 @@ ul {
     transition: all .3s linear
   }
 } */
+
+.hide {
+  display: none;
+}
+
+.content:hover + .hide {
+  display: block;
+  color: black;
+}

@@ -14,16 +14,16 @@ body {
 main {
   flex-grow: 1;
 }
-
-.content {
-  &:hover{
-    .author {
-      opacity: 1;
-    }
-  }
-  .author {
-    opacity: 0;
-    transition: all .3s linear
-  }
-}
+// this did not work so I am putting it in css - I don't think I am running scss right
+// .content {
+//   &:hover{
+//     .author {
+//       opacity: 1;
+//     }
+//   }
+//   .author {
+//     opacity: 0;
+//     transition: all .3s linear
+//   }
+// }
 

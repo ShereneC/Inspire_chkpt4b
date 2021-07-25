@@ -3,7 +3,13 @@ import { weatherService } from "../Services/WeatherService.js";
 
 
 function _draw() {
-  document.getElementById('weather').innerHTML = ProxyState.activeWeather.Template
+  let found = ProxyState.activeWeather
+  let template = ''
+  if (found.clicked) {
+    document.getElementById('weather').innerHTML = ProxyState.activeWeather.TemplateFahr
+  } else {
+    document.getElementById('weather').innerHTML = ProxyState.activeWeather.TemplateCel
+  }
 }
 export default class WeatherController {
   constructor() {
@@ -18,5 +24,9 @@ export default class WeatherController {
     } catch (error) {
       console.error(error)
     }
+  }
+
+  async toggle() {
+    await weatherService.toggle()
   }
 }

@@ -5,6 +5,12 @@ import { sandbox } from "./AxiosService.js";
 
 
 class WeatherService {
+
+  toggle(id) {
+    let found = ProxyState.activeWeather
+    found.clicked = !found.clicked
+    ProxyState.activeWeather = ProxyState.activeWeather
+  }
   async getWeather() {
     const res = await sandbox.get('weather')
     // console.log(res.data)
