@@ -4,7 +4,11 @@ import { imagesService } from "../Services/ImagesService.js"
 function _drawImage() {
   const image = ProxyState.activeImage
   console.log('image from drawImage:' + image)
-  let template = `<img class="w-100" src='${image}' alt="nice image" ></img>`
+  let template = `                    <div
+  style="background-image: url('${image}'); background-size: cover"
+  class="col w-100 vh-50">
+  <h3 class="text-light p-5">TIME</h3>
+</div>`
   document.getElementById('image').innerHTML = template
 }
 export default class ImagesController {
