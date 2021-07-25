@@ -7,13 +7,25 @@ function _drawImage() {
   let template = `                    <div
   style="background-image: url('${image}'); background-size: cover"
   class="col w-100 vh-50">
-  <h3 class="text-light p-5">TIME</h3>
+  <h3 id="time" class="text-light p-5">TIME</h3>
 </div>`
   document.getElementById('image').innerHTML = template
 }
+
+function _getTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  // m = _checkTime(m);
+  document.getElementById('time').innerHTML = h + ':' + m;
+  setTimeout(_getTime, 1000);
+}
+
+// function _checkTime(i)
 export default class ImagesController {
   constructor() {
     ProxyState.on('activeImage', _drawImage)
+    ProxyState.on('activeImage', _getTime)
     this.getNewImage()
   }
 
@@ -23,6 +35,10 @@ export default class ImagesController {
     } catch {
       console.log('could not get new image from controller')
     }
+  }
+
+  getTime() {
+
   }
 }
 
