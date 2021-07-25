@@ -4,25 +4,25 @@ import { tasksApi } from "./AxiosService.js";
 
 class TasksService {
   async removeTask(id) {
-    console.log('you are trying to remove a task', id)
+    // console.log('you are trying to remove a task', id)
     let chosenTask = ProxyState.tasks.find(t => t.id == id)
     const res = await tasksApi.delete(chosenTask.id)
-    console.log(res.data)
+    // console.log(res.data)
     ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
   }
   async getMyTasks() {
     const res = await tasksApi.get('')
-    console.log(res.data)
+    // console.log(res.data)
     ProxyState.tasks = res.data.map(t => new Task(t))
-    console.log('tasklist proxystate:', ProxyState.tasks)
+    // console.log('tasklist proxystate:', ProxyState.tasks)
   }
   async toggle(id) {
     try {
       let found = ProxyState.tasks.find(t => t.id == id)
-      console.log(found.completed)
+      // console.log(found.completed)
       found.completed = !found.completed
       const res = await tasksApi.put(id, found)
-      console.log(res.data)
+      // console.log(res.data)
       ProxyState.tasks = ProxyState.tasks
     }
     catch {
