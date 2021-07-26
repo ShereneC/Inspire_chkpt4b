@@ -12,7 +12,7 @@
     <title>Inspire_chkpt4b</title>
 </head>
 
-<style>
+<!-- <style>
     body.debug .container,
     body.debug .container-fluid {
         outline: 2px double blue;
@@ -28,7 +28,7 @@
         outline: 2px dotted forestgreen;
         outline-offset: -3px;
     }
-</style>
+</style> -->
 
 <body class="debug bg-light">
     <header>
@@ -36,10 +36,10 @@
             <div class="col"></div>
         </div>
     </header>
-    <main class="container-fluid bg-cream">
-        <div class="row p-0">
-            <div class="col-md-9">
-                <div class="row" id="image">
+    <main class="container-fluid bg-cream d-flex h-100">
+        <div class="row p-0 ">
+            <div class="col-md-9 flex-column d-flex align-content-stretch">
+                <div class="row mb-auto" id="image">
                     <div class="col-12" id="clock">
                     </div>
                 </div>
@@ -82,7 +82,7 @@
             <div class="col-md-3 d-flex flex-column align-items-center shadow border-primary rounded p-0">
                 <div class="row">
                     <div class="col d-flex align-items-center m-1 p-1">
-                        <p class="p-0 m-0">My To Do List!!:</p>
+                        <h4 class="p-0 m-0">My To Do List!!:</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -93,7 +93,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row mt-auto pb-1 mr-2">
+                <div class="row  pb-1 mr-2">
                     <div class="col d-flex align-items-center">
                         <form onsubmit="app.tasksController.addTask(event)"
                             class="d-flex  align-items-center justify-content-between">

@@ -6,8 +6,8 @@ function _drawImage() {
   console.log('image from drawImage:' + image)
   let template = `                    <div
   style="background-image: url('${image}'); background-size: cover"
-  class="col w-100 h-90">
-  <h3 id="time" class="text-light p-5">TIME</h3>
+  class="col">
+  <h1 id="time" class="text-center p-5 clock">TIME</h1>
 </div>`
   document.getElementById('image').innerHTML = template
 }
@@ -17,7 +17,14 @@ function _getTime() {
   let h = today.getHours();
   let m = today.getMinutes();
   // m = _checkTime(m);
-  document.getElementById('time').innerHTML = h + ':' + m;
+  if (h > 12) {
+    h -= 12
+  }
+  if (m < 10) {
+    document.getElementById('time').innerHTML = h + ':0' + m;
+  } else {
+    document.getElementById('time').innerHTML = h + ':' + m;
+  }
   setTimeout(_getTime, 1000);
 }
 
