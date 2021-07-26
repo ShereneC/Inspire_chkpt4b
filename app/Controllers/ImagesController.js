@@ -6,7 +6,7 @@ function _drawImage() {
   console.log('image from drawImage:' + image)
   let template = `                    <div
   style="background-image: url('${image}'); background-size: cover"
-  class="col w-100">
+  class="col w-100 h-90">
   <h3 id="time" class="text-light p-5">TIME</h3>
 </div>`
   document.getElementById('image').innerHTML = template
