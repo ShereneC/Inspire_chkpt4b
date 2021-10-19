@@ -3,13 +3,20 @@ import { imagesService } from "../Services/ImagesService.js"
 
 function _drawImage() {
   const image = ProxyState.activeImage
-  console.log('image from drawImage:' + image)
-  let template = `                    <div
-  style="background-image: url('${image}'); background-size: cover"
-  class="col">
-  <h1 id="time" class="text-center p-5 clock">TIME</h1>
-</div>`
-  document.getElementById('image').innerHTML = template
+  // document.body.style.backgroundImage = "url('${image}')";
+  // console.log('image from drawImage:' + image)
+  let template = /*html*/`
+  
+  
+  `
+  
+//   <div
+//     class="col">
+//   <h1 id="time" class="text-center p-5 clock">TIME</h1>
+// </div>`
+  document.getElementById('body').innerHTML = template
+  // style="background-image: url('${image}'); background-size: cover"
+
     //try this....
     // document.getElementById('image').outerHTML = template
     // then make the template change the <div to something like...
