@@ -57,3 +57,7 @@ ul {
 .glassy:before {
   background: inherit;
 }
+
+.quotes {
+  font-family: 'Italianno', cursive;
+}
