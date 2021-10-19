@@ -10,6 +10,10 @@ function _drawImage() {
   <h1 id="time" class="text-center p-5 clock">TIME</h1>
 </div>`
   document.getElementById('image').innerHTML = template
+    //try this....
+    // document.getElementById('image').outerHTML = template
+    // then make the template change the <div to something like...
+    //<body class="debug bg-light" id="image" style="background-image: url('${image}'); background-size: cover">
 }
 
 function _getTime() {
