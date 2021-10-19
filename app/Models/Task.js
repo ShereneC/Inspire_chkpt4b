@@ -8,8 +8,14 @@ export default class Task {
 
     get Template() {
 
-        return `
-        <li><span class="text-wrap"><input type="checkbox" id="complete" name="complete" value="checkedValue" class="mr-2" onclick="app.tasksController.toggle('${this.id}')" ${this.completed ? "checked" : ''} /></span>${this.description}<span class="action ml-2" onclick="app.tasksController.removeTask('${this.id}')">✖</span></li>
+        return /*html*/`
+        <li>
+          <span class="text-wrap">
+            <input type="checkbox" id="complete" name="complete" value="checkedValue" class="mr-2" onclick="app.tasksController.toggle('${this.id}')" ${this.completed ? "checked" : ''} />
+          </span>
+          ${this.description}
+          <span class="action ml-2" onclick="app.tasksController.removeTask('${this.id}')">✖</span>
+          </li>
         `
     }
 }
