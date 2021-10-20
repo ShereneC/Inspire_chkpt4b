@@ -9,7 +9,7 @@ export default class Task {
     get Template() {
 
         return /*html*/`
-        <li>
+        <li class="fontshadow">
           <span class="text-wrap">
             <input type="checkbox" id="complete" name="complete" value="checkedValue" class="mr-2" onclick="app.tasksController.toggle('${this.id}')" ${this.completed ? "checked" : ''} />
           </span>

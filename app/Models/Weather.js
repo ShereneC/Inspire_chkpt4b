@@ -10,8 +10,8 @@ export default class Weather {
 
   get TemplateFahr() {
     return `
-    <h3 onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>Today's Weather:</h3>
-    <h5 class ="fahr">${this.tempF}°F<span> and ${this.conditions}</span></h5>
+    <h3 class="fontshadow" onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>Today's Weather:</h3>
+    <h5 class="fahr fontshadow">${this.tempF}°F<span class="fontshadow"> and ${this.conditions}</span></h5>
     
     `
   }
