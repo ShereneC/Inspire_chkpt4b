@@ -16,7 +16,9 @@ function _drawImage() {
   let clockTemplate = /*html*/`
   <div
     class="col">
-  <h1 id="time" class="text-center p-5 clock fontshadow">TIME</h1>
+  <h1 id="time" class="text-center p-5 clock fontshadow time">TIME</h1>
+  <hr class="fontshadow">
+  <h4 class="text-center fontshadow text-light" >Welcome, Weary Traveler</h4>
 </div>`
   document.getElementById('clock').innerHTML = clockTemplate
 }

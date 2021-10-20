@@ -62,9 +62,16 @@ ul {
   font-family: 'Courgette', cursive;
 }
 
+.time {
+  font-family: 'Lemonada', cursive;
+}
+
 .fontshadow {
   text-shadow: 1px 1px 0 #555, -1px -1px 0 #555, 1px -1px 0 #555, -1px 1px 0 #555, 1px 1px 0 #555;
 }
 .wicon {
   width: 80px;
+}
+.hoverable {
+  cursor: pointer;
 }
