@@ -13,7 +13,7 @@ class WeatherService {
   }
   async getWeather() {
     const res = await sandbox.get('weather')
-    // console.log(res.data)
+    console.log(res.data)
     ProxyState.activeWeather = new Weather(res.data)
     // console.log('Consoling the active Weather', ProxyState.activeWeather)
   }
