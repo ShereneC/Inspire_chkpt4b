@@ -33,7 +33,7 @@ ul {
 }
 
 .content:hover + .hide {
-  display: block;
+  display: inline-flexbox;
   color: black;
 }
 

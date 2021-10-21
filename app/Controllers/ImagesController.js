@@ -18,7 +18,7 @@ function _drawImage() {
     class="col">
   <h1 id="time" class="text-center p-5 clock fontshadow time">TIME</h1>
   <hr class="fontshadow">
-  <h4 class="text-center fontshadow text-light" >Welcome, Weary Traveler</h4>
+  <h4 id="message" class="text-center fontshadow text-light" >Welcome, Weary Traveler</h4>
 </div>`
   document.getElementById('clock').innerHTML = clockTemplate
 }
@@ -28,8 +28,24 @@ function _getTime() {
   let h = today.getHours();
   let m = today.getMinutes();
   // m = _checkTime(m);
-  if (h > 12) {
+  let messageMorning = /*html*/ `
+  <h4>Good Morning, Traveler</h4>
+  `
+  let messageAfternoon = /*html*/ `
+  <h4>Good Afternoon, Traveler</h4>
+  `
+  let messageEvening = /*html*/ `
+  <h4>Good Evening, Traveler</h4>
+  `
+  if (h < 12) {
+    document.getElementById('message').innerHTML = messageMorning
+  }
+  if (h >= 12 && h < 17) {
     h -= 12
+    document.getElementById('message').innerHTML = messageAfternoon
+  }
+  if (h >= 17) {
+    document.getElementById('message').innerHTML = messageEvening
   }
   if (m < 10) {
     document.getElementById('time').innerHTML = h + ':0' + m;
