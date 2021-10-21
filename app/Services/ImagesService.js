@@ -6,7 +6,7 @@ class ImagesService {
     try {
 
       const res = await sandbox.get('images')
-      // console.log(res.data.imgUrl)
+      console.log('image data', res.data)
       ProxyState.activeImage = res.data.imgUrl
       console.log(ProxyState.activeImage)
     } catch {

@@ -33,7 +33,7 @@ ul {
 }
 
 .content:hover + .hide {
-  display: inline-flexbox;
+  display: block;
   color: black;
 }
 
@@ -70,7 +70,7 @@ ul {
   text-shadow: 1px 1px 0 #555, -1px -1px 0 #555, 1px -1px 0 #555, -1px 1px 0 #555, 1px 1px 0 #555;
 }
 .wicon {
-  width: 80px;
+  width: 50px;
 }
 .hoverable {
   cursor: pointer;
