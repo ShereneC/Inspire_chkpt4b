@@ -10,7 +10,7 @@ export default class Task {
 
         return /*html*/`
         <li class="fontshadow">
-          <span class="text-wrap">
+          <span class="text-wrap text-break">
             <input type="checkbox" id="complete" name="complete" value="checkedValue" class="mr-2" onclick="app.tasksController.toggle('${this.id}')" ${this.completed ? "checked" : ''} />
           </span>
           ${this.description}
