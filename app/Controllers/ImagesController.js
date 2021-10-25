@@ -34,14 +34,15 @@ function _getTime() {
   let messageEvening = /*html*/ `
   <h4>Good Evening, Traveler</h4>
   `
-  if (h < 12) {
+  if (h == 0) {
+    h += 12
     document.getElementById('message').innerHTML = messageMorning
-  }
-  if (h >= 12 && h < 17) {
+  } else if (h < 12) {
+    document.getElementById('message').innerHTML = messageMorning
+  } else if (h >= 12 && h < 17) {
     h -= 12
     document.getElementById('message').innerHTML = messageAfternoon
-  }
-  if (h >= 17) {
+  } else if (h >= 17) {
     h-=12
     document.getElementById('message').innerHTML = messageEvening
   }
