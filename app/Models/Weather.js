@@ -13,11 +13,9 @@ export default class Weather {
 
   get TemplateFahr() {
     return `
-    <h3 class="fontshadow text-light m-0 p-0 hoverable" onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>Today's Weather:</h3>
-    <h4 class="fahr fontshadow text-light m-0 p-0">${this.tempF}°F
-    <img class="wicon m-0 p-0" src="${this.icon}" alt="${this.conditions}"></h4>
-    <h5 class="fontshadow text-light">${this.location} ${this.description}</h5>
-    
+    <h5 class="fontshadow text-light m-0 p-0 hoverable" onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>${this.location} Weather:</h5>
+    <div class="d-flex flex-column align-items-right"><h4 class="fahr fontshadow text-light m-0 p-0">${this.tempF}°F<span><img class="wicon m-0 p-0" src="${this.icon}" alt="${this.conditions}"></span>${this.description}
+    </h4>
     `
   }
 
