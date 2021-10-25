@@ -39,6 +39,8 @@ function _getTime() {
     document.getElementById('message').innerHTML = messageMorning
   } else if (h < 12) {
     document.getElementById('message').innerHTML = messageMorning
+  } else if (h == 12) {
+    document.getElementById('message').innerHTML = messageAfternoon
   } else if (h >= 12 && h < 17) {
     h -= 12
     document.getElementById('message').innerHTML = messageAfternoon

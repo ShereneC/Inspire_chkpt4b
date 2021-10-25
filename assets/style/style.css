@@ -40,8 +40,6 @@ hr{
 
 .content:hover + .hide {
   visibility: visible;
-  display: block;
-  color: black;
 }
 
 .glassy:before {
