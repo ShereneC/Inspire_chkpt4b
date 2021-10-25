@@ -8,7 +8,7 @@ export default class Weather {
     this.tempF = Math.floor((data.main.temp - 273.15) * 9 / 5 + 32);
     this.location = data.name;
     this.description = data.weather[0].main;
-    this.clicked = data.clicked || false
+    this.clicked = data.clicked || true
   }
 
   get TemplateFahr() {
