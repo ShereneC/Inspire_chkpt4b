@@ -3,6 +3,7 @@ import Quote from "./Models/Quote.js"
 import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
+// import Image from "./Models/Image.js"
 
 class AppState extends EventEmitter {
   /** @type {Task[]} */
@@ -12,7 +13,9 @@ class AppState extends EventEmitter {
 
   /**@type {Weather} */
   activeWeather = null
+  /**@type {Image} */
   activeImage = null
+  activeImageAuthor = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

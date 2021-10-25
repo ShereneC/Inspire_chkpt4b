@@ -2,7 +2,8 @@ import { ProxyState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js"
 
 function _drawImage() {
-  const image = ProxyState.activeImage
+  const image = ProxyState.activeImage;
+  const author = ProxyState.activeImageAuthor;
   let template = /*html*/`
   <style>
     body {
@@ -13,6 +14,10 @@ function _drawImage() {
     </style>  
     `
     document.getElementById('image').outerHTML = template
+  let authorTemplate = /*html*/`
+  <p>Image by ${author}
+  `
+  document.getElementById('author').innerHTML = authorTemplate
   let clockTemplate = /*html*/`
   <h1 id="time" class="text-center p-2 clock fontshadow time">TIME</h1>
   <hr class="fontshadow">
@@ -60,6 +65,7 @@ function _getTime() {
 export default class ImagesController {
   constructor() {
     ProxyState.on('activeImage', _drawImage)
+    ProxyState.on('activeImageAuthor', _drawImage)
     ProxyState.on('activeImage', _getTime)
     this.getNewImage()
   }
