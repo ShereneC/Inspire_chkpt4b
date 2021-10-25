@@ -8,6 +8,12 @@ ul {
   list-style-type: none;
 }
 
+hr{
+  height: 3px;
+  background-color: #ccc;
+  border: none;
+}
+
 /* This is what he did in class, but it did not work. */
 /* .content {
   &:hover{
@@ -24,7 +30,7 @@ ul {
 .clock {
   font-weight: bold;
   color: #fff;
-	font-size: 80px;
+	font-size: 110px;
 	text-shadow: -1px 1px 2px #000,
 }
 
