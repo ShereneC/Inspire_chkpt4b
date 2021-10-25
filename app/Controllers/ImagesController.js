@@ -45,6 +45,7 @@ function _getTime() {
     document.getElementById('message').innerHTML = messageAfternoon
   }
   if (h >= 17) {
+    h-=12
     document.getElementById('message').innerHTML = messageEvening
   }
   if (m < 10) {

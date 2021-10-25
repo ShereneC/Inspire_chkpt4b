@@ -16,7 +16,7 @@
 </head>
 
 <!-- Code for debugging containers, rows, cols -->
-<!-- <style>
+<style>
     body.debug .container,
     body.debug .container-fluid {
         outline: 2px double blue;
@@ -32,7 +32,7 @@
         outline: 2px dotted forestgreen;
         outline-offset: -3px;
     }
-</style> -->
+</style>
 
 <body class="debug" id="body">
     <div id="image"></div>
@@ -42,62 +42,21 @@
         </div>
     </header>
     <main class="container-fluid bg-cream d-flex h-100">
-        <div class="row vw-100 flex-row p-0 ">
-            <div class="col-md-9 flex-column d-flex align-content-stretch">
-                <div class="row mb-auto" id="image">
-                    <div class="col-12" id="clock">
-                    </div>
-                </div>
-                <!-- Check this for extra rows & columns - goodness! -->
-                <div class="row">
-                    <div class="col-md-3" id="weather">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-12">
-                            </div>
-                        </div>
-                        <!-- Quotes get inserted here -->
-                        <div class="row">
-                            <div class="col-12 quotes" id="quotes">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ToDoList -->
-            <div class="col-md-3 d-flex flex-column align-items-center shadow rounded  px-2 py-5 glassy">
-                <div class="row vh-10"></div>
-                <div class="row">
-                    <div class="col d-flex align-items-center m-1 p-1">
-                        <h4 class="p-0 m-0 fontshadow">To Do List</h4>
-                    </div>
-                </div>
-                <div class="row align-content-left">
-                    <div class="col-11 mb-3 px-1 bg-light rounded">
-                        <ul class="p-1 w-100 d-flex flex-column" id="tasks">
-                            <!-- task template gets inserted here -->
-                        </ul>
-                    </div>
-                </div>
-                <div class="row  pb-1 mr-2">
-                    <div class="col d-flex align-items-center">
-                        <form onsubmit="app.tasksController.addTask(event)"
-                            class="d-flex  align-items-center justify-content-between">
-                            <input type="text" name="description" id="description" placeholder="Add task..." required
-                                minlength="3" maxlength="50">
-                            <button type="submit" class="btn btn-primary p-0">➕</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="row vh-10"></div>
-            </div>
+        <!-- Main Row -->
+<div class="row vw-100">
+    <!-- This column contains image data  -->
+    <div class="col-md-3 d-flex">
+        <div class="mt-auto">
+            <h3 class="">Put image data here</h3>
         </div>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>
     </main>
     <footer class="bg-dark text-light">
     </footer>

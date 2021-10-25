@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    <title>Inspire_chkpt4b</title>
+</head>
+
+<!-- Code for debugging containers, rows, cols -->
+<!-- <style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style> -->
+
+<body class="debug" id="body">
+    <div id="image"></div>
+    <header>
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </header>
+    <main class="container-fluid bg-cream d-flex h-100">
+        <div class="row vw-100 flex-row p-0 ">
+            <div class="col-md-9 flex-column d-flex align-content-stretch">
+                <div class="row mb-auto" id="image">
+                    <div class="col-12" id="clock">
+                    </div>
+                </div>
+                <!-- Check this for extra rows & columns - goodness! -->
+                <div class="row">
+                    <div class="col-md-3" id="weather">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-12">
+                            </div>
+                        </div>
+                        <!-- Quotes get inserted here -->
+                        <div class="row">
+                            <div class="col-12 quotes" id="quotes">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ToDoList -->
+            <div class="col-md-3 d-flex flex-column align-items-center shadow rounded  px-2 py-5 glassy">
+                <div class="row vh-10"></div>
+                <div class="row">
+                    <div class="col d-flex align-items-center m-1 p-1">
+                        <h4 class="p-0 m-0 fontshadow">To Do List</h4>
+                    </div>
+                </div>
+                <div class="row align-content-center">
+                    <div class="col-12 mb-3 px-2 bg-light rounded">
+                        <ul class="p-1 w-90 d-flex flex-column text-wrap text-break" id="tasks">
+                            <!-- task template gets inserted here -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row  pb-1 mr-2">
+                    <div class="col d-flex align-items-center">
+                        <form onsubmit="app.tasksController.addTask(event)"
+                            class="d-flex  align-items-center justify-content-between">
+                            <input type="text" name="description" id="description" placeholder="Add task..." required
+                                minlength="3" maxlength="50">
+                            <button type="submit" class="btn btn-primary p-0">➕</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row vh-10"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light">
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"
+        integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
