@@ -60,7 +60,24 @@
     </div>
     <div class="col-md-3 d-flex flex-column justify-content-between">
 <div class="fontshadow text-right" id="weather">Weather</div>
-<div class="fontshadow text-center">ToDo List</div>
+<div class="d-flex flex-column align-items-center shadow rounded bg-dark mb-2">
+    <div class="d-flex align-items-center m-1 p-1">
+        <h5 class="p-0 m-0 fontshadow">To Do List</h5>
+    </div>
+    <div class="d-flex align-content-center mb-3 px-2 bg-light rounded">
+        <ul class="p-1 w-90 d-flex flex-column text-wrap text-break" id="tasks">
+            <!-- task template gets inserted here -->
+        </ul>
+    </div>
+    <div class="d-flex align-items-center">
+        <form onsubmit="app.tasksController.addTask(event)"
+            class="d-flex  align-items-center justify-content-between">
+            <input type="text" name="description" id="description" placeholder="Add task..." required
+                minlength="3" maxlength="50">
+            <button type="submit" class="btn btn-primary p-0">➕</button>
+        </form>
+    </div>
+</div>
     </div>
 </div>
     </main>
