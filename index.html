@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lemonada:wght@300&display=swap" rel="stylesheet">
     <title>Inspire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 
 <!-- Code for debugging containers, rows, cols -->
@@ -62,14 +63,14 @@
 <div class="fontshadow text-right" id="weather">Weather</div>
 <div class="d-flex flex-column align-items-center shadow rounded bg-dark mb-2">
     <div class="d-flex align-items-center m-1 p-1">
-        <h5 class="p-0 m-0 fontshadow">To Do List</h5>
+        <h5 class="p-0 m-0 fontshadow text-light">To Do List</h5>
     </div>
-    <div class="d-flex align-content-center mb-3 px-2 bg-light rounded">
+    <div class="d-flex align-content-center mb-2 px-2">
         <ul class="p-1 w-90 d-flex flex-column text-wrap text-break" id="tasks">
             <!-- task template gets inserted here -->
         </ul>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center pb-1">
         <form onsubmit="app.tasksController.addTask(event)"
             class="d-flex  align-items-center justify-content-between">
             <input type="text" name="description" id="description" placeholder="Add task..." required

@@ -9,12 +9,13 @@ export default class Task {
     get Template() {
 
         return /*html*/`
-        <li class="fontshadow">
+        <li class="text-light">
           <span class="text-wrap text-break">
             <input type="checkbox" id="complete" name="complete" value="checkedValue" class="mr-2" onclick="app.tasksController.toggle('${this.id}')" ${this.completed ? "checked" : ''} />
           </span>
-          ${this.description}
-          <span class="action ml-2" onclick="app.tasksController.removeTask('${this.id}')">✖</span>
+          <span>${this.description}</span>
+          <span class="action ml-2 text-right" onclick="app.tasksController.removeTask('${this.id}')"><span class="fa fa-trash text-red"></span></span>
+          
           </li>
         `
     }
