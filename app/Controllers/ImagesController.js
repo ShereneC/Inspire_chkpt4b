@@ -65,7 +65,7 @@ function _getTime() {
 export default class ImagesController {
   constructor() {
     ProxyState.on('activeImage', _drawImage)
-    ProxyState.on('activeImageAuthor', _drawImage)
+
     ProxyState.on('activeImage', _getTime)
     this.getNewImage()
   }
