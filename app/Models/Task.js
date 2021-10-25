@@ -15,7 +15,6 @@ export default class Task {
           </span>
           <span>${this.description}</span>
           <span class="action ml-2 text-right" onclick="app.tasksController.removeTask('${this.id}')"><span class="fa fa-trash text-red"></span></span>
-          
           </li>
         `
     }

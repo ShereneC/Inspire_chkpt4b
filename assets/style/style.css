@@ -35,10 +35,11 @@ hr{
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 .content:hover + .hide {
+  visibility: visible;
   display: block;
   color: black;
 }
