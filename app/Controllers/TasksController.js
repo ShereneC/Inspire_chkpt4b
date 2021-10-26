@@ -5,10 +5,15 @@ import { tasksService } from "../Services/TasksService.js";
 //Private
 function _drawTasks() {
   let template = ''
+  let completedCount = 0
   ProxyState.tasks.forEach(t => {
     template += t.Template
+    if (t.completed === true) {
+      completedCount++
+    }
   })
   document.getElementById('tasks').innerHTML = template
+  document.getElementById('completedCount').innerHTML = completedCount + '/' + ProxyState.tasks.length
 }
 
 //Public
