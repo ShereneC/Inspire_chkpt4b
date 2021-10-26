@@ -84,3 +84,15 @@ hr{
 .tasks {
   background-color: rgba(66, 62, 62, 0.6);
 }
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  /* background-color: #eee; */
+}
+
+.no-outline:focus {
+  outline: none;
+}
