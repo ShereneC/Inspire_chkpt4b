@@ -27,6 +27,7 @@ export default class TasksController {
       }
       // console.log(rawTask)
       await tasksService.addTask(rawTask)
+      form.reset()
     } catch (error) {
       console.error(error)
     }
