@@ -6,11 +6,11 @@ class ImagesService {
     try {
 
       const res = await sandbox.get('images')
-      console.log('image data', res.data)
-      ProxyState.activeImage = res.data.imgUrl
-      ProxyState.activeImageAuthor = res.data.author
+      // console.log('image data', res.data)
+      ProxyState.activeImage = res.data
+      // ProxyState.activeImageAuthor = res.data.author
       console.log('active Image', ProxyState.activeImage)
-      console.log('active Image', ProxyState.activeImageAuthor)
+      // console.log('active Image', ProxyState.activeImageAuthor)
     } catch {
       console.log('problem with getNewImage in ImagesService')
     }
