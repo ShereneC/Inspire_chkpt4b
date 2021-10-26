@@ -80,3 +80,7 @@ hr{
 .hoverable {
   cursor: pointer;
 }
+
+.tasks {
+  background-color: rgba(66, 62, 62, 0.6);
+}
