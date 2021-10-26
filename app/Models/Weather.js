@@ -22,7 +22,7 @@ export default class Weather {
   get TemplateCel() {
     return `
     <h5 class="fontshadow text-light m-0 p-0 hoverable" onclick="app.weatherController.toggle('${this.id}')" ${this.clicked ? "clicked" : ''}>${this.location} Weather:</h5>
-    <div class="d-flex flex-column align-items-right"><h4 class="fahr fontshadow text-light m-0 p-0">${this.tempC}°F<span><img class="wicon m-0 p-0" src="${this.icon}" alt="${this.conditions}"></span>${this.description}
+    <div class="d-flex flex-column align-items-right"><h4 class="fahr fontshadow text-light m-0 p-0">${this.tempC}°C<span><img class="wicon m-0 p-0" src="${this.icon}" alt="${this.conditions}"></span>${this.description}
     </h4>
     `
   }
